@@ -1,0 +1,15 @@
+[package]
+name = "users"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+interface.workspace = true
+axum.workspace = true
+rusqlite.workspace = true
+anyhow.workspace = true
+r2d2.workspace = true
+r2d2_sqlite.workspace = true
+tokio.workspace = true

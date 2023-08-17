@@ -1,0 +1,32 @@
+[package]
+name = "axum-multicrate"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+users.workspace = true
+interface.workspace = true
+item.workspace = true
+
+axum.workspace = true
+tokio.workspace = true
+rusqlite.workspace = true
+anyhow.workspace = true
+r2d2.workspace = true
+r2d2_sqlite.workspace = true
+
+[workspace]
+members = ["users", "interface", "item"]
+
+[workspace.dependencies]
+axum = "0.6.20"
+tokio = { version = "1.31.0", features = ["full"] }
+users = { path = "./users" }
+interface = { path = "./interface" }
+item = { path = "./item" }
+rusqlite = { version = "0.29.0", features = ["bundled"] }
+anyhow = "1.0.74"
+r2d2 = "0.8.10"
+r2d2_sqlite = "0.22.0"
